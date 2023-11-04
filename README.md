@@ -1,3 +1,3 @@
-# WeatherTracker inspired from Github madebygps to learn AZ204
+# Articles API inspired from Github madebygps to learn AZ204
  
-A web application that allows users to track weather updates in real-time for their chosen cities. The system also triggers Azure Functions for alerts when a specific weather threshold is met (like if it's going to rain).
+A API to create/ edit/ delete personal article. The system also triggers Azure Functions for sending owner email when a article is created.
