@@ -1,8 +1,28 @@
+using Articles.Dal.Extensions;
+using Articles.Services.ConcreteClass;
+using Articles.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient<ITopicService, TopicService>();
+builder.Services.AddDALServices(rOpts =>
+{
+    var configValue = builder.Configuration.GetValue<string>("Authentication:CookieAuthentication:LoginPath");
+
+    rOpts.ConnexionString = builder.Configuration.GetValue<string>("connectionStrings:articleRead") ?? "";
+    rOpts.ProviderName = builder.Configuration.GetValue<string>("connectionStrings:providerName") ?? "";
+
+},
+wOpts =>
+{
+    wOpts.ConnexionString = builder.Configuration.GetValue<string>("connectionStrings:articleReadWrite") ?? "";
+    wOpts.ProviderName = builder.Configuration.GetValue<string>("connectionStrings:providerName") ?? "";
+
+});
 
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
