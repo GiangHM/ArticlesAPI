@@ -1,5 +1,0 @@
-C:\Users\LSH946\Learning\AZ204\ArticlesAPI\DataAccessLayerShared\obj\Debug\net7.0\DataAccessLayerShared.csproj.AssemblyReference.cache
-C:\Users\LSH946\Learning\AZ204\ArticlesAPI\DataAccessLayerShared\obj\Debug\net7.0\DataAccessLayerShared.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\LSH946\Learning\AZ204\ArticlesAPI\DataAccessLayerShared\obj\Debug\net7.0\DataAccessLayerShared.AssemblyInfoInputs.cache
-C:\Users\LSH946\Learning\AZ204\ArticlesAPI\DataAccessLayerShared\obj\Debug\net7.0\DataAccessLayerShared.AssemblyInfo.cs
-C:\Users\LSH946\Learning\AZ204\ArticlesAPI\DataAccessLayerShared\obj\Debug\net7.0\DataAccessLayerShared.csproj.CoreCompileInputs.cache
