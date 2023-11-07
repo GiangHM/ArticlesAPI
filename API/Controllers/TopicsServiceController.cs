@@ -28,5 +28,11 @@ namespace API.Controllers
         {
             return await _topicService.CreateTopic(creationModel);
         }
+
+        [HttpPut("Topics/{id}")]
+        public async Task<bool> UpdateTopic([FromRoute] long id, [FromQuery] bool isDeactivated)
+        {
+            return await _topicService.UpdateTopic(id, isDeactivated);
+        }
     }
 }

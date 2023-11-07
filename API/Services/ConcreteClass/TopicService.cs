@@ -24,5 +24,9 @@ namespace API.Services.ConcreteClass
         {
             return await _topicQuery.GetAllTopics();
         }
+        public async Task<bool> UpdateTopic(long id, bool deactivated)
+        {
+            return await _topicCommand.UpdateTopic(id, deactivated);
+        }
     }
 }

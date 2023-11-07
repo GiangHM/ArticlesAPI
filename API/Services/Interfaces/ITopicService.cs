@@ -6,5 +6,6 @@ namespace API.Services.Interfaces
     {
         Task<IEnumerable<TopicResponseModel>> GetAllTopics();
         Task<bool> CreateTopic(TopicRequestCreationModel creationModel);
+        Task<bool> UpdateTopic(long id, bool deactivated);
     }
 }

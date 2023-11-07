@@ -23,5 +23,19 @@ namespace API.Dal.Commands
             }
             return true;
         }
+
+        public async Task<bool> UpdateTopic(long id, bool deactivated)
+        {
+            var parameters = new Dictionary<string, object>
+            {
+                { "Id", id },
+                { "IsDeactivated", deactivated }
+            };
+            using (var connection = await GetConnection())
+            {
+                await ExecuteWithoutReturn(connection, "UpdateTopic", parameters);
+            }
+            return true;
+        }
     }
 }
