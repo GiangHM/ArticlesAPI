@@ -275,6 +275,3 @@ __pycache__/
 
 # Healthcheck
 healthchecksdb
-WebApp/Bollore.Tom.WebApp/wwwroot/
-Bollore.Tom.API.Authorization/healthchecksdb-shm
-Bollore.Tom.API.Authorization/healthchecksdb-wal
