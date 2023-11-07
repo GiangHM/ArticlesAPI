@@ -20,7 +20,7 @@ namespace DataAccessLayerShared
 
         protected DalBase(IServiceProvider serviceProvider)
         {
-            _logger = serviceProvider.GetRequiredService(typeof(ILogger).MakeGenericType(GetType())) as ILogger;
+            _logger = serviceProvider.GetRequiredService(typeof(ILogger<>).MakeGenericType(GetType())) as ILogger;
             _factory = GetDbProviderFactory(serviceProvider);
             _connectionString = GetConnectionString(serviceProvider);
         }

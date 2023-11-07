@@ -26,9 +26,9 @@ namespace DataAccessLayerShared
     }
 
 
-    public abstract class DALBaseReadOnly : DalBaseReadOnly<DalReadOnlyOptions>
+    public abstract class DalBaseReadOnly : DalBaseReadOnly<DalReadOnlyOptions>
     {
-        protected DALBaseReadOnly(IServiceProvider serviceProvider)
+        protected DalBaseReadOnly(IServiceProvider serviceProvider)
             : base(serviceProvider)
         {
 

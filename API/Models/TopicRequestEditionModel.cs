@@ -1,4 +1,4 @@
-﻿namespace Articles.Models
+﻿namespace API.Models
 {
     public class TopicRequestEditionModel
     {

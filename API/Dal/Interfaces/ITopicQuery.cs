@@ -1,6 +1,6 @@
-﻿using Articles.Models;
+﻿using API.Models;
 
-namespace Articles.Dal.Interfaces
+namespace API.Dal.Interfaces
 {
     public interface ITopicQuery
     {

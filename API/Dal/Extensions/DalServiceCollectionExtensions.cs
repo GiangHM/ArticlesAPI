@@ -1,8 +1,9 @@
-﻿using Articles.Dal.Interfaces;
-using Articles.Dal.Queries;
+﻿using API.Dal.Commands;
+using API.Dal.Interfaces;
+using API.Dal.Queries;
 using DataAccessLayerShared;
 
-namespace Articles.Dal.Extensions
+namespace API.Dal.Extensions
 {
     public static class DalServiceCollectionExtensions
     {
@@ -13,6 +14,7 @@ namespace Articles.Dal.Extensions
             services.Configure(readOptions);
             services.Configure(readwriteOptions);
             services.AddTransient<ITopicQuery, TopicQuery>();
+            services.AddTransient<ITopicCommand, TopicCommand>();
             return services;
         }
     }

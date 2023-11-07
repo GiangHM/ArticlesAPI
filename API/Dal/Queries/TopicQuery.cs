@@ -1,10 +1,10 @@
-﻿using Articles.Dal.Interfaces;
-using Articles.Models;
+﻿using API.Dal.Interfaces;
+using API.Models;
 using DataAccessLayerShared;
 
-namespace Articles.Dal.Queries
+namespace API.Dal.Queries
 {
-    public class TopicQuery : DALBaseReadOnly, ITopicQuery
+    public class TopicQuery : DalBaseReadOnly, ITopicQuery
     {
         public TopicQuery(IServiceProvider serviceProvider) : base(serviceProvider)
         {

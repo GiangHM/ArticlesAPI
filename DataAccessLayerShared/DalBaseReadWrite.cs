@@ -25,9 +25,9 @@ namespace DataAccessLayerShared
 
     }
 
-    public class DALBaseReadWrite : DalBaseReadWrite<DalReadWriteOptions>
+    public class DalBaseReadWrite : DalBaseReadWrite<DalReadWriteOptions>
     {
-        protected DALBaseReadWrite(IServiceProvider serviceProvider)
+        protected DalBaseReadWrite(IServiceProvider serviceProvider)
             : base(serviceProvider)
         {
 
