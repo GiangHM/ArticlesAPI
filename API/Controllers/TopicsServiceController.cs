@@ -10,16 +10,19 @@ namespace API.Controllers
     public class TopicServiceController : ControllerBase
     {
         private readonly ITopicService _topicService;
+        private readonly ILogger<TopicServiceController> _logger;
 
-        public TopicServiceController(ITopicService topicService)
+        public TopicServiceController(ITopicService topicService
+            , ILogger<TopicServiceController> logger)
         {
             _topicService = topicService;
-
+            _logger = logger;
         }
 
         [HttpGet("Topics")]
         public async Task<IEnumerable<TopicResponseModel>> GetAllTopics()
         {
+            _logger.LogInformation("If you're seeing this, we get all topics");
             return await _topicService.GetAllTopics();
         }
 

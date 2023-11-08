@@ -1,8 +1,23 @@
 using API.Dal.Extensions;
 using API.Services.ConcreteClass;
 using API.Services.Interfaces;
+using Microsoft.Extensions.Logging.AzureAppServices;
 
 var builder = WebApplication.CreateBuilder(args);
+// Add log provider
+builder.Logging.ClearProviders();
+builder.Logging.AddAzureWebAppDiagnostics();
+builder.Services.Configure<AzureFileLoggerOptions>(options =>
+{
+    options.FileName = "azure-diagnostics-";
+    options.FileSizeLimit = 50 * 1024;
+    options.RetainedFileCountLimit = 5;
+});
+
+builder.Services.Configure<AzureBlobLoggerOptions>(options =>
+{
+    options.BlobName = "log.txt";
+});
 
 // Add services to the container.
 builder.Services.AddDALServices(rOpts =>
