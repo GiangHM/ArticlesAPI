@@ -1,3 +1,7 @@
+using Articles.Dal.Extensions;
+using Articles.Services.ConcreteClass;
+using Articles.Services.Interfaces;
+using AzureBlobStorage.Extensions;
 using API.Dal.Extensions;
 using API.Services.ConcreteClass;
 using API.Services.Interfaces;
@@ -35,7 +39,8 @@ wOpts =>
 
 });
 
-builder.Services.AddTransient<ITopicService, TopicService>();
+
+builder.Services.AddAzureBlobStorage();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
