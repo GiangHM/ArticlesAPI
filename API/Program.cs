@@ -1,10 +1,7 @@
-using Articles.Dal.Extensions;
-using Articles.Services.ConcreteClass;
-using Articles.Services.Interfaces;
-using AzureBlobStorage.Extensions;
 using API.Dal.Extensions;
 using API.Services.ConcreteClass;
 using API.Services.Interfaces;
+using AzureBlobStorage.Extensions;
 using Microsoft.Extensions.Logging.AzureAppServices;
 
 var builder = WebApplication.CreateBuilder(args);
