@@ -21,10 +21,10 @@ namespace API.Controllers
         }
 
         [HttpGet("SasGeneration")]
-        public Uri GenereateSasBlob(string fileName)
+        public Uri GenereateSasBlob(string fileName, Azure.Storage.Sas.BlobContainerSasPermissions permission)
         {
             _logger.LogInformation("If you're seeing this, we were generating the sas blob");
-            return _blobStorageService.CreateServiceSASBlob("Put container name", fileName: fileName);
+            return _blobStorageService.CreateServiceSASBlob("Documentfiles", fileName: fileName, 1, null, permission);
         }
     }
 }

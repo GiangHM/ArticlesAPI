@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="8.0.0" />
@@ -16,20 +15,14 @@
   <ItemGroup>
     <Folder Include="Dal\Commands\" />
     <Folder Include="Dal\Queries\" />
-    <Folder Include="Dlls\" />
     <Folder Include="Services\" />
+    <ProjectReference Include="..\..\..\BlobStorage\AzureBlobStorage\AzureBlobStorage.csproj" />
     <ProjectReference Include="..\DataAccessLayerShared\DataAccessLayerShared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="AzureBlobStorage">
-      <HintPath>Dlls\AzureBlobStorage.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Update="appsettings.Development.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
