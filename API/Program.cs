@@ -6,6 +6,11 @@ using Microsoft.Extensions.Logging.AzureAppServices;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add log provider
+// using package: Microsoft.Extensions.Logging.AzureAppServices
+// Application logs => write in the file with name: azure-diagnostics-
+// We can download the log from https://{your app service name}.scm.azurewebsites.net/api/dump
+// and check the file in .\LogFiles\Application
+
 builder.Logging.ClearProviders();
 builder.Logging.AddAzureWebAppDiagnostics();
 builder.Services.Configure<AzureFileLoggerOptions>(options =>
