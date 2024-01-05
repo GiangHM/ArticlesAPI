@@ -275,3 +275,7 @@ __pycache__/
 
 # Healthcheck
 healthchecksdb
+API/appsettings.json
+API/appsettings.Development.json
+API/Properties/PublishProfiles/articleapi-learning - Web Deploy.pubxml
+API/Properties/ServiceDependencies/articleapi-learning - Web Deploy/profile.arm.json

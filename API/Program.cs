@@ -2,6 +2,7 @@ using API.Dal.Extensions;
 using API.Services.ConcreteClass;
 using API.Services.Interfaces;
 using AzureBlobStorage.Extensions;
+using AzureTableStorage.Extensions;
 using Microsoft.Extensions.Logging.AzureAppServices;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -43,6 +44,7 @@ wOpts =>
 
 
 builder.Services.AddAzureBlobStorage();
+builder.Services.AddAzureTableStorage();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
